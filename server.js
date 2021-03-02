@@ -10,7 +10,7 @@ const server = express()
 
 const io = socketIO(server, {
   cors: {
-    origin: "https://billify.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
