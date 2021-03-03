@@ -19,6 +19,7 @@ io.on("connection", (socket) => {
   console.log("Client connected");
 
   socket.on("hello", (msg) => {
-    console.log(msg);
+    /* socket.emit("an withevent", msg); */
+    socket.broadcast.emit("an withevent", msg);
   });
 });
