@@ -18,8 +18,8 @@ const io = socketIO(server, {
 io.on("connection", (socket) => {
   console.log("Client connected");
 
-  socket.on("hello", (msg) => {
+  socket.on("payment", (msg) => {
     /* socket.emit("an withevent", msg); */
-    socket.broadcast.emit("an withevent", msg);
+    socket.broadcast.emit("payment status", msg);
   });
 });
